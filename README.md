@@ -10,14 +10,18 @@ My little MySQL project, learning while coding
 
 ## How to start
 
-Use this script to start or flush and restore the DB to original data.
+Use this script to
+1. Purge the container and its volume
+1. Restore the `bestbuy` database.
 ```
 . ./flush.sh
 ```
 
-## How to run an sql script
+Alternatively, run the `restore.sql` script just to drop and restore the `bestbuy` database (example below).
 
-The repo includes a number of sql scripts in the `create`, `read`, `update` and `delete` folder. They're meant to work with the original data.
+## How to run an SQL script
+
+The repo includes a number of SQL scripts in the `create`, `read`, `update` and `delete` folder. They're meant to work with the original data.
 
 Use the `run.sh` script with those optional arguments:
 
@@ -31,10 +35,13 @@ Use the `run.sh` script with those optional arguments:
 
 Running from a file
 ```
-. ./run.sh -rw read/dbs.sh
+. ./run.sh -r create/restore.sql
 ```
 
 Running with an inline script
 ```
 . ./run.sh -rwe "USE bestbuy; SELECT id, slug, price FROM items ORDER BY id"
 ```
+
+## P.S.
+More tips spread around SQL script files.
