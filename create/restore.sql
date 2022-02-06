@@ -52,8 +52,7 @@ INSERT INTO sections (slug)
     ('components'),
     ('accessories'),
     ('sbc'),
-    ('iot'),
-    ('smartphones');
+    ('iot');
 
 DROP TABLE IF EXISTS section_meta;
 CREATE TABLE section_meta (
@@ -67,7 +66,6 @@ INSERT INTO section_meta (item_id, section_id)
     (1, 2),
     (2, 6),
     (3, 6),
-    (4, 7),
     (5, 1),
     (5, 3),
     (6, 4),

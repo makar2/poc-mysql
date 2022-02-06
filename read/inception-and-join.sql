@@ -6,7 +6,8 @@ SELECT
   i.price as price,
   s2.section as section
 FROM items as i
--- Left joins are kind of pointless here, since there's full overlap of presence of values in all tables
+-- Here LEFT JOIN includes Pixel 6 (#4) with NULL as section, since he belings to no section
+-- Replacing LEFT JOIN with JOIN makes the smartphone drop out of the list
 LEFT JOIN (
   SELECT
     sm.section_id as section_id,
