@@ -2,6 +2,7 @@
 -- took from https://dba.stackexchange.com/questions/237048/1055-expression-1-of-select-list-is-not-in-group-by-clause-and-contains-nonag
 SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));
 
+CREATE DATABASE IF NOT EXISTS bestbuy;
 
 USE bestbuy;
 
